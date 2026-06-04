@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
 
-.intro {
-    background-color: #c57878;
+.intro h1{
+    color: #a73737;
     font-family: 'Lora', Garamond, serif;
-    color: #004080;
+}
+
+.intro p{
+    color: #020479;
 }
