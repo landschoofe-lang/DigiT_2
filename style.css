@@ -6,28 +6,9 @@
   font-family: 'Arial', sans-serif;
 }
 
-.intro h1{
-    color: #a73737;
-    text-align: center;
-}
-
 .intro p{
     color: #020479;
-}
-
-.self-btn {
-    display: inline-block;
-    padding: 12px 24px;
-    color: #a73737;
-    font-family: sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    text-align: center;
-    background-color: #007bff;
-    border: none;
-    border-radius: 6px;
-    align-items: center;
+    padding: 20px;
 }
     
 .references p{
@@ -35,7 +16,43 @@
 }
 
 .references {
-    text-align: center;
+    text-align: left;
+    padding: 20px;
+}
+
+.sacraments {
+    text-align: left;
+    padding: 20px;
+    color: #020479;
+}
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.counter {
+  font-family: sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #3b82f6;
+  --num: 0;
+  counter-reset: num var(--num);
+  animation: countUp 3s forwards ease-out; 
+}
+
+.counter::after {
+  content: counter(num);
+}
+
+@keyframes countUp {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 436;
+  }
 }
 
 .image img{
@@ -50,8 +67,11 @@
   align-items: flex-end;
   padding: 40px;
   color: white;
-  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
-              url('trinity_catholic_colleg2.jpg') no-repeat center top/cover;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+              url('template-header.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center calc(0% + 60%);
 }
 
 .hero-content {
